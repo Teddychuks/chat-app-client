@@ -30,7 +30,7 @@ export function FriendRequest() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    // @ts-expect-error
+    // @ts-expect-error null
     handleSendRequest(data);
   }
 

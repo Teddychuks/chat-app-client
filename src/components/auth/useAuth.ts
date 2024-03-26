@@ -76,7 +76,7 @@ export function useSignUpUser() {
     UserData,
     unknown
   >({
-    // @ts-expect-error
+    // @ts-expect-error null
     mutationFn: (userData: UserData) => signUpApi(userData),
     onSuccess: () => {
       toast.success("Account Successfully Created");
@@ -106,7 +106,7 @@ export function useSendFriendRequest() {
     UserData,
     unknown
   >({
-   // @ts-expect-error
+    // @ts-expect-error null
     mutationFn: (userData: UserData) => sendFriendRequestApi(userData),
     onSuccess: () => {
       toast.success("Request successfully");
