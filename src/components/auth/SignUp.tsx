@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineEye } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useSignUpUser } from "./useAuth";
+import LoginSpinner from "../LoginSpinner";
 
 const SignUp = () => {
   const { handleSignUp, isPending } = useSignUpUser();
@@ -94,7 +95,7 @@ const SignUp = () => {
                 disabled={isPending}
                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50"
               >
-                Sign up
+                {isPending ? <LoginSpinner /> : "Sign Up"}
               </button>
             </div>
           </form>
