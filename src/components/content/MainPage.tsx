@@ -15,7 +15,7 @@ export const MainPage = () => {
   const [receiverUsername, setReceiverUsername] = useState("");
 
   useEffect(() => {
-    const newSocket = io("ws://localhost:3000");
+    const newSocket = io("https://chat-app-bev8.onrender.com");
     setSocket(newSocket);
 
     // Log the connection status
